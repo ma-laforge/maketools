@@ -5,18 +5,23 @@
 #PATH_BUILD: Path to root folder where object files are to be generated.
 ifndef PATH_BUILD
 #   tmpeval := $(error Missing PATH_BUILD: Problem with build system)
-   PATH_BUILD = ./obj
+   PATH_BUILD := ./obj
 endif
 
 #PATH_BIN: Path to root folder where binaries are to be generated.
 ifndef PATH_BIN
-   PATH_BIN = ./bin
+   PATH_BIN := ./bin
+endif
+
+EMPTYVAR :=
+ifndef CPPFLAGS
+   CPPFLAGS = $(EMPTYVAR)
 endif
 
 #Useful flags:
 #   -g: include debug
 #   -Wall: Turn on all warnings
-CPPFLAGS = $(addprefix -I ,$(LPATH_INCLUDE))
+CPPFLAGS += $(addprefix -I ,$(LPATH_INCLUDE))
 
 #Initialize variables
 #-------------------------------------------------------------------------------

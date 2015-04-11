@@ -1,7 +1,7 @@
 
 ifdef SCRATCH_ROOT
-   PATH_BUILD = $(addprefix $(SCRATCH_ROOT)/,cppbuild/maketools)
-   PATH_BIN = $(addprefix $(SCRATCH_ROOT)/,cppbuild/maketools/bin)
+   PATH_BUILD := $(addprefix $(SCRATCH_ROOT)/,cppbuild/maketools)
+   PATH_BIN := $(addprefix $(SCRATCH_ROOT)/,cppbuild/maketools/bin)
 endif
 
 #-------------------------------------------------------------------------------
